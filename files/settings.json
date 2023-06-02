@@ -1,0 +1,6 @@
+{
+    "hash_file": "files/hash_file.txt",
+    "bins_file": "files/bins.txt",
+    "last_card_numbers": "files/last_card_numbers.txt",
+    "core": 4
+}
