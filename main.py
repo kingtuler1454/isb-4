@@ -1,8 +1,9 @@
+import argparse
+import json
+
 from functions.search_card_number import card_number_selection
 from functions.lun import lun
 from functions.statistic import get_stats
-import argparse
-import json
 
 
 if __name__ == "__main__":
