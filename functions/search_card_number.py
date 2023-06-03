@@ -42,6 +42,6 @@ def card_number_selection(last_card_numbers:str, bin:str, hash:str,core: int):
 if __name__=='__main__':
      card_number_selection('5274',
            '437783',                
-'e537d605a9f957a2c6ccb8cb2bb59537675e048c7ef78f86389a333d54feb154270a0f9df684f2b0d0e30c4eee9403bfd53b8e32af89f6fba9fd16aafdfa7420'
+'e537d605a9f957a2c6ccb8cb2bb59537675e048c7ef78f86389a333d54feb154270a0f9df684f2b0d0e30c4eee9403bfd53b8e32af89f6fba9fd16aafdfa7420',4
 
 )
