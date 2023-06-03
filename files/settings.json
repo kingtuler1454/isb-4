@@ -1,6 +1,9 @@
 {
-    "hash_file": "files/hash_file.txt",
-    "bins_file": "files/bins.txt",
-    "last_card_numbers": "files/last_card_numbers.txt",
-    "core": 4
+        "hash": "e537d605a9f957a2c6ccb8cb2bb59537675e048c7ef78f86389a333d54feb154270a0f9df684f2b0d0e30c4eee9403bfd53b8e32af89f6fba9fd16aafdfa7420",
+        "bins": [
+            "437773",
+            "437783"
+        ],
+        "last_numbers": "5274",
+        "core": 4
 }
