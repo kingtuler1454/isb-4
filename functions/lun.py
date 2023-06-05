@@ -1,3 +1,6 @@
+import logging
+
+
 def lun(number: str) -> bool:
     """Функция алгоритма Луна
     number - номер карты
@@ -17,9 +20,10 @@ def lun(number: str) -> bool:
             s += int(number[i])
         c = 10 - ((s % 10) % 10)
         if str(c) == number[0]:
-            print('Номер карты прошел алгоритм Луна')
+            logging.info("Номер карты прошел алгоритм Луна")
             return True
-        print('Номер карты не прошел алгоритм Луна')
+        logging.info("Номер карты не прошел алгоритм Луна")
         return False
-    print('Неккоректный номер')
+    logging.info("Неккоректный ввод")
+
     return False

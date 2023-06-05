@@ -2,6 +2,10 @@ import multiprocessing as mp
 import hashlib
 from progress.bar import IncrementalBar
 import json
+import logging
+
+from lun import lun
+
 
 def check_number(tmp: list) -> int:
     """
@@ -39,7 +43,12 @@ def card_number_selection(
     with mp.Pool(processes=core) as p:
         for result in p.map(check_number, arguments_for_check_number):
             if result:
-                print(f"\nWe have found {result} and have terminated pool")
+                logging.info(f"\nWe have found {result} and have terminated pool")
                 p.terminate()
+                tmp = {}
+                tmp["number_card"] = str(result)
+                tmp["lun"] = lun(tmp["number_card"])
+                with open("../files/result.json", "w") as f:
+                    json.dump(tmp, f)
                 return result
             bar.next()

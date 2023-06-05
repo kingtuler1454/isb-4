@@ -3,6 +3,11 @@ from functions.lun import lun
 from functions.statistic import get_stats
 import argparse
 import json
+import logging
+
+
+logger = logging.getLogger()
+logger.setLevel("INFO")
 
 
 if __name__ == "__main__":
@@ -51,4 +56,4 @@ if __name__ == "__main__":
     if args.statistic:
         get_stats(settings)
     else:
-        print("Неккоректный ввод")
+        logging.error("Неккоректный ввод")
