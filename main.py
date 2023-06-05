@@ -1,9 +1,10 @@
-from functions.search_card_number import card_number_selection
-from functions.lun import lun
-from functions.statistic import get_stats
 import argparse
 import json
 import logging
+
+from functions.search_card_number import card_number_selection
+from functions.lun import lun
+from functions.statistic import get_stats
 
 
 logger = logging.getLogger()
