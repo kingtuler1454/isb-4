@@ -1,7 +1,7 @@
 import logging
 
 
-def lun(number: str) -> bool:
+def luhn(number: str) -> bool:
     """Функция алгоритма Луна
     number - номер карты
     вернёт true если номер прошёл проверку и false иначе

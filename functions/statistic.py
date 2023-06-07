@@ -21,5 +21,9 @@ def get_stats(settings: dict) -> None:
     plt.ylabel("Время")
     plt.xlabel("Количество ядер")
     plt.title("Зависимость работы от количества ядер процессора")
-    plt.plot(list(x + 1 for x in range(settings["core"])), times[4:], color="red")
-    plt.savefig("files\grafic")
+    plt.plot(
+        list(x + 1 for x in range(settings["core"])),
+        times[settings["core"] :],
+        color="red",
+    )
+    plt.savefig("../files/grafic")

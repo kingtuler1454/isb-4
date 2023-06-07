@@ -4,7 +4,7 @@ from progress.bar import IncrementalBar
 import json
 import logging
 
-from lun import lun
+from luhn import luhn
 
 
 def check_number(tmp: list) -> int:
@@ -47,7 +47,7 @@ def card_number_selection(
                 p.terminate()
                 tmp = {}
                 tmp["number_card"] = str(result)
-                tmp["lun"] = lun(tmp["number_card"])
+                tmp["lun"] = luhn(tmp["number_card"])
                 with open("../files/result.json", "w") as f:
                     json.dump(tmp, f)
                 return result

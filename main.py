@@ -3,7 +3,7 @@ import json
 import logging
 
 from functions.search_card_number import card_number_selection
-from functions.lun import lun
+from functions.luhn import luhn
 from functions.statistic import get_stats
 
 
@@ -29,7 +29,7 @@ if __name__ == "__main__":
     )
     group.add_argument(
         "-l",
-        "--lun_alorithm",
+        "--luhn_alorithm",
         help="Проверить номер карты по алгоритму Луна",
         action="store_true",
     )
@@ -53,7 +53,7 @@ if __name__ == "__main__":
             settings["processes_amount"],
         )
     if args.lun_alorithm:
-        lun(number_card)
+        luhn(number_card)
     if args.statistic:
         get_stats(settings)
     else:
